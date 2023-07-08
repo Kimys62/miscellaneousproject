@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>레드마피아</title>
+    <script src="index.js"></script>
+    <style>
+        #back {
+            background-color: midnightblue;
+            color: white;
+            font-size: 25px; padding: 10px 20px;
+            border-radius: 10px;
+        }
+        #create_btn {
+            background-color: skyblue;
+            font-size: 25px; padding: 10px 20px;
+            border-radius: 10px;
+            position: relative;
+            left: 1150px;
+            bottom: 650px;
+        }
+        /*방 목록 테두리*/
+        #room-list {
+            width: 400px; height: 700px;
+            border: 2px solid black;
+            position: relative;
+            left: 700px;
+            top: 30px;
+        }
+        /*방 참가 테두리*/
+        #room-number {
+            width: 380px; height: 50px;
+            border: 1px solid darkslategrey;
+            border-radius: 10px;
+            position: relative;
+            left: 10px;
+        }
+        #room-join {
+            float: right;
+            position: relative;
+            right: 10px;
+            background-color: skyblue;
+            font-size: 15px; padding: 12px 13px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <script>
+        function room_in_btn() {
+            window.location.href = '/index/red_mafia'
+        };
+    </script>
+
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="room_list">
+        <form action="/delete" method="post">
+            <input type="button" id="back" value="나가기"></input><br>
+            <!--<input type="button" id="back" onclick="back_btn()" value="나가기"></input><br>-->
+        </form>
+
+    <div id="room-list">
+        <br>
+        <div id="room-number">
+            <form action="/red_mafia" method="post">
+                &nbsp;&nbsp;<span id="room">방</span><input type="submit" id="room-join" value="입장"></input><br>
+            </form>
+
+        </div>
+    </div>
+    <button id="create_btn" onclick="create_btn()">방 만들기</button><br>
+    </div>
+</body>
+</html>
